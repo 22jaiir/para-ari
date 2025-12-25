@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Ari 🎁</title>
+
+  <style>
+    :root{
+      --bg1:#f7fbff;
+      --bg2:#fff7fb;
+      --card: rgba(255,255,255,.80);
+      --ink:#221a24;
+      --muted:#6b556e;
+      --accent:#6d5efc;
+      --line: rgba(230,206,228,.85);
+      --shadow: 0 22px 60px rgba(27,18,31,.12);
+      --r1: 22px;
+      --r2: 16px;
+    }
+
+    *{ box-sizing:border-box }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(109,94,252,.16), transparent 60%),
+        radial-gradient(900px 600px at 90% 20%, rgba(255,179,199,.18), transparent 60%),
+        radial-gradient(900px 600px at 50% 100%, rgba(111,211,255,.16), transparent 60%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+      padding:20px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:560px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--r1);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      outline:1px solid rgba(255,255,255,.6);
+      outline-offset:-2px;
+    }
+
+    .header{
+      padding:22px 22px 18px;
+      border-bottom:1px dashed var(--line);
+    }
+
+    .header h1{
+      margin:0 0 12px;
+      font-size:24px;
+      font-weight:900;
+      letter-spacing:.2px;
+      text-align:center;
+    }
+
+    .header p{
+      margin:0;
+      font-size:14.5px;
+      color:var(--muted);
+      line-height:1.75;
+      white-space:pre-line;
+    }
+
+    .ticket{
+      padding:20px 22px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      border-top:1px solid var(--line);
+    }
+
+    .title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:18px;
+      font-weight:800;
+    }
+
+    .desc{
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .amount{
+      text-align:center;
+      font-size:30px;
+      font-weight:900;
+      color:var(--accent);
+      margin:4px 0;
+    }
+
+    .code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: rgba(109,94,252,.06);
+      border:1px dashed rgba(109,94,252,.40);
+      padding:10px;
+      border-radius:14px;
+      text-align:center;
+      font-size:13px;
+      user-select:all;
+    }
+
+    .actions{
+      display:flex;
+      justify-content:center;
+      margin-top:6px;
+    }
+
+    button{
+      border:none;
+      background:var(--accent);
+      color:white;
+      padding:12px 18px;
+      border-radius:14px;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 12px 28px rgba(109,94,252,.30);
+      transition:transform .1s ease, box-shadow .1s ease;
+    }
+
+    button:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 34px rgba(109,94,252,.36);
+    }
+
+    footer{
+      text-align:center;
+      font-size:12.5px;
+      color:rgba(107,85,110,.75);
+      margin-top:14px;
+    }
+
+    .toast{
+      position:fixed;
+      bottom:18px;
+      left:50%;
+      transform:translateX(-50%);
+      background:white;
+      border:1px solid var(--line);
+      box-shadow:0 16px 40px rgba(0,0,0,.14);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:13px;
+      opacity:0;
+      pointer-events:none;
+      transition:.2s;
+    }
+
+    .toast.show{
+      opacity:1;
+      transform:translateX(-50%) translateY(-4px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+
+      <div class="header">
+        <h1>🧸🎁 Tickets de regalo</h1>
+        <p>
+Hola Ari,
+soy Jair, ese botcito que empezó jugando Free y terminó llegando a tu live,
+y sin darse cuenta pasó a compartir pequeños momentos del día a día.
+
+Con el tiempo, fuiste parte de mi rutina:
+entre el trabajo, jugar un rato y desconectarme un poco.
+Siempre que te avisaba, estabas ahí, y eso se valora más de lo que parece.
+
+Sé que hoy las cosas son distintas, y está bien.
+Aun así, quería que supieras que fuiste —y sigues siendo— alguien importante para mí,
+de esas personas que llegan sin avisar y dejan huella.
+
+Gracias por aguantar mis locuras,
+por estar cuando se necesitaba, incluso cuando no coincidíamos del todo
+(pequeña renegona 😄).
+A veces, solo estar ya significa mucho.
+
+Gracias por los buenos momentos, peque. 🧸✨
+
+Feliz Navidad 🎄
+Espero de todo corazón que lo disfrutes.
+Para canjear el cupón, solo avísame y lo coordinamos sin apuro c:
+
+        </p>
+      </div>
+
+      <!-- CUPÓN PARA ELLA -->
+      <div class="ticket">
+        <div class="title">✨ Ticket para ti</div>
+        <div class="desc">
+          Para un gustito, una salida o algo que te haga sonreír 🙂
+        </div>
+        <div class="amount">S/ 200</div>
+        <div class="code" id="code1">GIFT-ARI-200</div>
+        <div class="actions">
+          <button onclick="copy('GIFT-ARI-200')">📋 Copiar cupón</button>
+        </div>
+      </div>
+
+      <!-- CUPÓN PARA LAS MASCOTAS -->
+      <div class="ticket">
+        <div class="title">🐾 Ticket para Luki y Bola</div>
+        <div class="desc">
+          Para que les compres algún juguetito o un pequeño detalle 🐶🐾
+        </div>
+        <div class="amount">S/ 50</div>
+        <div class="code" id="code2">GIFT-LUKI-BOLA-50</div>
+        <div class="actions">
+          <button onclick="copy('GIFT-LUKI-BOLA-50')">📋 Copiar cupón</button>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      Ari 🤍
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">✅ Cupón copiado</div>
+
+  <script>
+    const toast = document.getElementById('toast');
+    let timer;
+
+    async function copy(text){
+      try{
+        await navigator.clipboard.writeText(text);
+      }catch{
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      toast.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('show'), 1400);
+    }
+  </script>
+</body>
+</html>
